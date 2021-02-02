@@ -1,1 +1,9 @@
 notes.md
+node_modules/
+_assignment/
+dist/
+.cache/
+
+.npm
+.env
+.env.test
