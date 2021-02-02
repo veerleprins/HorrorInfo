@@ -51,11 +51,11 @@ Then type the following line of code into your terminal:
 
 With this line of code, you've successfully downloaded the repository to your desired location.
 
-<!-- ### 3. Install all the packages :bookmark_tabs:
+### 3. Install all the packages :bookmark_tabs:
 
 Then type the code below into your terminal:
 
-`npm install`
+`npm i`
 
 With this line of code, you download all the packages you need for this repo.
 
@@ -63,9 +63,9 @@ With this line of code, you download all the packages you need for this repo.
 
 Go to the repository in the terminal and add the following line of code below:
 
-` npm start`
+` npm run dev`
 
-Now React opens http://localhost:300/ automatically in your browser to view the visualization! :raised_hands: -->
+Now you can open http://localhost:1234/ automatically in your browser to view the web application! :raised_hands:
 
 ## :globe_with_meridians: Deploy
 
