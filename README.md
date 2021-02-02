@@ -1,46 +1,87 @@
-# Web App From Scratch @cmda-minor-web 2020 - 2021
+## Web Apps from Scratch - 2021
 
-In this course you will learn to build a web application without frameworks or unnecessary libraries, but with vanilla HTML, CSS & JavaScript as much as possible. The end result is a modular, single page web app (SPA). Data will be retrieved from an external API of your choice, manipulated and finally shown in the UI of the App. You will learn different ways to structure code and develop your own coding style. With the gained knowledge you will be able to build interactive prototypes, based on real data. Also you will gain a better understanding of how API's, frameworks and libraries work.
+<!-- <img width="1624" alt="Screenshot of the page with the visualizations." src="https://user-images.githubusercontent.com/35265583/104816885-454efe00-581e-11eb-8c93-da6a5e05cfeb.png"> -->
 
-## Learning goals
+## Table of contents:
 
-* _You can add structure to your code by applying patterns. You can defend the choice for the chosen patterns_
-* _You can retrieve data, manipulate it and dynamically convert it to html elements using templating_
-* _You understand how you can work with an external API using asynchronous code_
-* _You understand how you can manage state in your application and you inform the user of state where necessary_
+- [Description](#black_nib-description)
+- [Feature](#small_orange_diamond-feature)
+- [Datasets](#link-datasets)
+- [Install](#arrow_down-install)
+- [Deploy](#globe_with_meridians-deploy)
+- [Sources](#books-sources)
 
-[Rubric](https://docs.google.com/spreadsheets/d/1vJJ4EhIqkefWj1nWFp0Pnvy1Kld-S2V3qwZgC6XQO0c/edit?usp=sharing), with learning goals
-[Overall plaaning](https://teams.microsoft.com/l/file/95EAEC95-4AB8-4E62-A810-2445969460B6?tenantId=0907bb1e-21fc-476f-8843-02d09ceb59a7&fileType=xlsx&objectUrl=https%3A%2F%2Ficthva.sharepoint.com%2Fsites%2FFDMCI_EDU__CMD20_21_Minor_Web_5i7j73jt%2FShared%20Documents%2F02%20-%20Web%20App%20From%20Scratch%2FWAFS%202021%20Planning.xlsx&baseUrl=https%3A%2F%2Ficthva.sharepoint.com%2Fsites%2FFDMCI_EDU__CMD20_21_Minor_Web_5i7j73jt&serviceName=teams&threadId=19:9bd8abc7b32c4e0196ddbaae12cf8e79@thread.tacv2&groupId=5d001f9a-0a4b-4768-92b1-0f1768328ba3)
+## :black_nib: Description
 
-## Program
+For the Web Apps from Scratch course within the Minor Web Design & Development ([@cmda-minor-web](https://github.com/cmda-minor-web)) we learn about Designing and Developing web applications from scratch without using frameworks.
 
-### Week 1 - Hello API 🐒
+This repository shows a web application about ... with the API from ...
 
-Goal: Retrieve data from an API and render it in an overview page.
+## :small_orange_diamond: Feature
 
-[Excercises](https://github.com/cmda-minor-web/web-app-from-scratch-2021/blob/master/course/week-1.md)
+...
 
-[Slides](https://docs.google.com/presentation/d/1hXfgIhBzJ2QXDmpKpMcx7G-a9R_fVrcPdeOyM3G0I00/edit?usp=sharing)
+## :link: APIs
 
-### Week 2 - Design and Refactor 🛠
+The API that was used is the API supplied by .... These are public APIs and can be found at the link below:
 
-Goal: Design the web app. Add routes and states. Split code into modules. Rendering detail page.
+<!-- - []() -->
 
-[Excercises](https://github.com/cmda-minor-web/web-app-from-scratch-2021/blob/master/course/week-2.md)
+## :arrow_down: Install
 
-[Slides](https://docs.google.com/presentation/d/1ycANqFk9LtrZCBJF2TyQ1c_bejjEctSlb-52xbK_P1g/edit?usp=sharing)
+### 1. Install npm :computer:
 
-### Week 3 - Wrapping up 🎁
+Before getting started, you need to install nvm. nvm can be installed by typing the following line of code in terminal and pressing enter:
 
-Goal:
-Manipulate data. Reflect on end result
+`curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh `
 
-[Excercises](https://github.com/cmda-minor-web/web-app-from-scratch-2021/blob/master/course/week-3.md)
+If nvm has been successfully installed, you can check the version by typing the following line of code in the terminal and pressing enter:
 
-[Slides](https://docs.google.com/presentation/d/1yZi-ODpENKHMr0-kpKmnCI6dGSgXS9oeLxMXCJnieic/edit?usp=sharing)
+`nvm --version`
 
-## Best Practices
-All work during this course will be tested against our [Best Practices for JavaScript](https://github.com/cmda-minor-web/best-practices/blob/master/javascript.md).
+### 2. :open_file_folder: Clone folder
+
+Then you need to download this project and open it with your code editor. To do this, open your terminal with the correct path in which you want this repository. **Example**:
+
+`cd/Desktop/Repos`
+
+Then type the following line of code into your terminal:
+
+`git clone https://github.com/veerleprins/web-app-from-scratch-2021.git`
+
+With this line of code, you've successfully downloaded the repository to your desired location.
+
+<!-- ### 3. Install all the packages :bookmark_tabs:
+
+Then type the code below into your terminal:
+
+`npm install`
+
+With this line of code, you download all the packages you need for this repo.
+
+### 4. :white_check_mark: Start and run the code
+
+Go to the repository in the terminal and add the following line of code below:
+
+` npm start`
+
+Now React opens http://localhost:300/ automatically in your browser to view the visualization! :raised_hands: -->
+
+## :globe_with_meridians: Deploy
+
+My web application can be found at the link below:  
+...
+
+## :books: Sources
+
+The sources I've used to create this web application:
+
+<!-- - []()
+- []() -->
+
+## :lock: License
+
+This repo is licensed as [MIT]() by :copyright: [Veerle Prins](https://github.com/veerleprins), 2020
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
