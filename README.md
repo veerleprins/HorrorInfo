@@ -24,6 +24,7 @@ This repository shows a web application about movies with the API from [The Movi
 ## :link: APIs
 
 The API that was used is the API supplied by The Movie DB. These are public APIs and can be found at the link below:
+
 https://developers.themoviedb.org/3/movies
 
 <!-- - []() -->
@@ -71,7 +72,7 @@ Now you can open http://localhost:1234/ in your browser to view the web applicat
 ## :globe_with_meridians: Deploy
 
 My web application can be found at the link below:  
-https://veerleprins-wafs.netlify.app
+https://veerleprins-wafs-movies.netlify.app
 
 ## :books: Sources
 
