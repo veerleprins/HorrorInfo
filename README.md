@@ -13,7 +13,7 @@
 
 ## :black_nib: Description
 
-For the Web Apps from Scratch course within the Minor Web Design & Development ([@cmda-minor-web](https://github.com/cmda-minor-web)) we learn about Designing and Developing web applications from scratch without using frameworks.
+For the Web Apps from Scratch course within the Minor Web Design & Development ([@cmda-minor-web](https://github.com/cmda-minor-web)) we learn about Designing and Developing web applications from scratch without using frameworks or unnecessary libraries.
 
 This repository shows a web application about ... with the API from ...
 
@@ -70,14 +70,14 @@ Now you can open http://localhost:1234/ automatically in your browser to view th
 ## :globe_with_meridians: Deploy
 
 My web application can be found at the link below:  
-...
+https://veerleprins-wafs-movies.netlify.app
 
 ## :books: Sources
 
 The sources I've used to create this web application:
 
-<!-- - []()
-- []() -->
+- 🚀 Getting Started. (n.d.). Parcel.Js. Retrieved 2 February 2021, from https://parceljs.org/getting_started.html
+<!-- - []() -->
 
 ## :lock: License
 

@@ -1,4 +1,5 @@
-import { bro } from "./modules/test";
+import "regenerator-runtime/runtime";
+import { start } from "./modules/fetch";
 import "../styles/main.css";
 
-document.querySelector("h1").textContent = bro(`How's it going`);
+start();
