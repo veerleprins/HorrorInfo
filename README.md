@@ -15,7 +15,7 @@
 
 For the Web Apps from Scratch course within the Minor Web Design & Development ([@cmda-minor-web](https://github.com/cmda-minor-web)) we learn about Designing and Developing web applications from scratch without using frameworks or unnecessary libraries.
 
-This repository shows a web application about ... with the API from ...
+This repository shows a web application about movies with the API from [The Movie DB](https://www.themoviedb.org/).
 
 ## :small_orange_diamond: Feature
 
@@ -23,7 +23,8 @@ This repository shows a web application about ... with the API from ...
 
 ## :link: APIs
 
-The API that was used is the API supplied by .... These are public APIs and can be found at the link below:
+The API that was used is the API supplied by The Movie DB. These are public APIs and can be found at the link below:
+https://developers.themoviedb.org/3/movies
 
 <!-- - []() -->
 
@@ -65,12 +66,12 @@ Go to the repository in the terminal and add the following line of code below:
 
 ` npm run dev`
 
-Now you can open http://localhost:1234/ automatically in your browser to view the web application! :raised_hands:
+Now you can open http://localhost:1234/ in your browser to view the web application! :raised_hands:
 
 ## :globe_with_meridians: Deploy
 
 My web application can be found at the link below:  
-https://veerleprins-wafs-movies.netlify.app
+https://veerleprins-wafs.netlify.app
 
 ## :books: Sources
 

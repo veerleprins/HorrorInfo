@@ -14,6 +14,7 @@ export const start = async () => {
 
 const createItems = (data, type) => {
   let parent = document.getElementById(type);
+  console.log(data.results);
   data.results.forEach((element) => {
     let li = document.createElement("li");
     let img = document.createElement("img");
