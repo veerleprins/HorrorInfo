@@ -1,6 +1,6 @@
 import { fetchData } from "./fetchData";
 import { createItems } from "./createElements";
-import { API_KEY } from "./../conf/config";
+import { API_KEY } from "../conf/config";
 
 export const start = async () => {
   const base = "https://api.themoviedb.org/3/movie/";
