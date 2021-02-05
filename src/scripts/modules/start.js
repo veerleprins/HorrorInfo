@@ -1,16 +1,18 @@
 import { fetchData } from "./fetchData";
 import { createItems } from "./createElements";
-
-let baseURL = "https://api.themoviedb.org/3/";
-const API_KEY = process.env.API_KEY;
-const popularURL = `${baseURL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
-const ratedURL = `${baseURL}movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`;
+import { API_KEY } from "../../config/config";
 
 export const start = async () => {
-  const popular = await fetchData(popularURL);
-  const topRated = await fetchData(ratedURL);
-  console.log(API_KEY);
-  console.log(popularURL);
+  const base = "https://api.themoviedb.org/3/movie/";
+  const lang = "&language=en-US&page=1";
+
+  const popular = await fetchData(`${base}popular?api_key=${API_KEY}${lang}`);
+  const topRated = await fetchData(
+    `${base}top_rated?api_key=${API_KEY}${lang}`
+  );
+  const upcoming = await fetchData(`${base}upcoming?api_key=${API_KEY}${lang}`);
+
   createItems(popular, "popular");
   createItems(topRated, "rated");
+  createItems(upcoming, "upcoming");
 };

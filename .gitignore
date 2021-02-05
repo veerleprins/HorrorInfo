@@ -4,6 +4,8 @@ _assignment/
 dist/
 .cache/
 
+config/
+
 .npm
 .env
 .env.test

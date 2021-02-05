@@ -1,7 +1,6 @@
 // This function creates the elements :
 export const createItems = (data, type) => {
-  let parent = document.getElementById(type);
-  console.log(data.results);
+  let parent = document.getElementsByClassName(type);
   data.results.forEach((element) => {
     let li = document.createElement("li");
     let img = document.createElement("img");
@@ -10,6 +9,6 @@ export const createItems = (data, type) => {
       `https://image.tmdb.org/t/p/w342/${element.poster_path}`
     );
     li.appendChild(img);
-    parent.appendChild(li);
+    parent[0].appendChild(li);
   });
 };
