@@ -83,6 +83,6 @@ The sources I've used to create this web application:
 
 ## :lock: License
 
-This repo is licensed as [MIT]() by :copyright: [Veerle Prins](https://github.com/veerleprins), 2020
+This repo is licensed as [MIT](https://github.com/veerleprins/web-app-from-scratch-2021/blob/master/LICENSE) by :copyright: [Veerle Prins](https://github.com/veerleprins), 2020
 
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
