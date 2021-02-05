@@ -4,7 +4,7 @@ _assignment/
 dist/
 .cache/
 
-conf/
+apiKey.js
 
 .npm
 .env
