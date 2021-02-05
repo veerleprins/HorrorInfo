@@ -4,7 +4,7 @@ _assignment/
 dist/
 .cache/
 
-config/
+conf/
 
 .npm
 .env
