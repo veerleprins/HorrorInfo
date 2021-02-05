@@ -8,6 +8,7 @@ const ratedURL = `${baseURL}movie/top_rated?api_key=${API_KEY}&language=en-US&pa
 export const start = async () => {
   const popular = await fetchData(popularURL);
   const topRated = await fetchData(ratedURL);
+  console.log(popular);
   createItems(popular, "popular");
   createItems(topRated, "rated");
 };
