@@ -1,29 +1,23 @@
 // Externals
 import Navigo from "navigo";
 
-// Modules
+// Routes
 import { homePage } from "../views/homePage";
 import { detailPage } from "../views/detailPage";
-
-const router = new Navigo("/", false);
+import { errorPage } from "../views/errorPage";
 
 export const Router = () => {
+  const router = new Navigo("/", false);
   const body = document.getElementById("app");
 
   try {
-    router
-      .on({
-        "/": homePage(body, router),
-        "/about": detailPage(body, router),
-        "/error": () => {
-          console.log("error");
-        },
-      })
-      .notFound(() => {
-        console.error("404");
-        router.navigate("/error");
-      })
-      .resolve();
+    router.on("/", homePage(body, router));
+    router.on("/about", detailPage(body, router));
+    router.on("/error", errorPage(body, router));
+    router.notFound(() => {
+      router.navigate("/error");
+    });
+    router.resolve();
   } catch (err) {
     console.error(err);
     throw new Error(err);

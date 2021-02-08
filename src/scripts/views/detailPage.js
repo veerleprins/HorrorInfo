@@ -1,6 +1,6 @@
 export const detailPage = (content, router) => {
+  content.setAttribute("class", "aboutPage");
   return async () => {
-    console.log("het werkt about");
-    content.setAttribute("class", "aboutPage");
+    return console.log("het werkt about");
   };
 };

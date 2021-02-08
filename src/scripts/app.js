@@ -1,6 +1,6 @@
 import "regenerator-runtime/runtime";
 
-// Modules
+// Routing
 import { Router } from "./routes/router";
 
 const init = () => {
