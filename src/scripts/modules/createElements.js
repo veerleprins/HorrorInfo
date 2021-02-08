@@ -1,5 +1,5 @@
-// This function creates the elements :
 export const createItems = (data, type) => {
+  // This function creates the elements :
   let parent = document.getElementsByClassName(type);
   data.results.forEach((element) => {
     let li = document.createElement("li");

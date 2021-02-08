@@ -13,12 +13,15 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/veerleprins/web-app-from-scratch-2021/issues"
   },
   "homepage": "https://github.com/veerleprins/web-app-from-scratch-2021#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "navigo": "^8.8.6"
   }
 }
