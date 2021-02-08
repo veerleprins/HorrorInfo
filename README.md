@@ -6,9 +6,11 @@
 
 - [Description](#black_nib-description)
 - [Feature](#small_orange_diamond-feature)
+- [Diagrams](#book-feature)
 - [Datasets](#link-datasets)
 - [Install](#arrow_down-install)
 - [Deploy](#globe_with_meridians-deploy)
+- [Future features](#small_blue_diamond-future-features)
 - [Sources](#books-sources)
 
 ## :black_nib: Description
@@ -21,7 +23,13 @@ This repository shows a web application about movies with the API from [The Movi
 
 ...
 
-## :link: APIs
+## :book: Diagrams
+
+### Actor diagram
+
+### Interaction diagram
+
+## :link: API
 
 The API that was used is the API supplied by The Movie DB. These are public APIs and can be found at the link below:
 
@@ -74,12 +82,17 @@ Now you can open http://localhost:1234/ in your browser to view the web applicat
 My web application can be found at the link below:  
 https://veerleprins-wafs-movies.netlify.app
 
+## :small_blue_diamond: Future features
+
+...
+
 ## :books: Sources
 
 The sources I've used to create this web application:
 
 - 🚀 Getting Started. (n.d.). Parcel.Js. Retrieved 2 February 2021, from https://parceljs.org/getting_started.html
-<!-- - []() -->
+- Schepenaar, W. (2018, 12 juni). Server-side vs Client-side Routing - Wilbert Schepenaar. Medium. https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f
+- npm: navigo. (2021, 7 februari). npm. https://www.npmjs.com/package/navigo
 
 ## :lock: License
 
