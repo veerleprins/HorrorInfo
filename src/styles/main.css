@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+
 :root {
   --primary: #fff;
   --secondary: #000;
+  --gradient-1: #002265;
 }
 
 * {
@@ -12,13 +15,42 @@
 }
 
 html {
-  background: var(--primary);
-  color: var(--secondary);
+  background: linear-gradient(var(--gradient-1), var(--secondary));
+  color: var(--primary);
+  height: 100vh;
+}
+
+/*******************************************************
+                        HEADER:
+********************************************************/
+
+h1 {
+  font-family: "Amatic SC", cursive;
+  text-align: center;
+  font-size: 5em;
+  font-weight: normal;
+}
+
+body::before {
+  content: "";
+  background-image: url("../images/Moon.svg");
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  right: 0px;
+  width: 300px;
+  height: 300px;
 }
 
 /*******************************************************
                         MAIN:
 ********************************************************/
+
+h2 {
+  font-family: "Amatic SC", cursive;
+  font-weight: normal;
+}
 
 main {
   padding: 0px 100px;
@@ -46,9 +78,10 @@ main section ul li {
 
 footer {
   display: flex;
+  background-color: black;
   flex-direction: column;
   align-items: center;
-  border-top: 2px solid #cecece;
+  border-top: 1px solid rgb(96, 96, 96);
   width: 100vw;
   max-height: 180px;
   padding: 1.5em 1em;
@@ -60,7 +93,7 @@ footer p {
 
 footer a {
   text-decoration: none;
-  color: black;
+  color: var(--primary);
 }
 
 footer a:hover {
