@@ -39,8 +39,6 @@ The API that was used is the API supplied by The Movie DB. These are public APIs
 
 https://developers.themoviedb.org/3/movies
 
-<!-- - []() -->
-
 ## :arrow_down: Install
 
 ### 1. Install npm :computer:
