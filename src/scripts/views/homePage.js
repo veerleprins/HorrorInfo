@@ -9,7 +9,6 @@ export const homePage = (body, router) => {
   return async () => {
     const horrors = await fetchData("discover/movie", "&with_genres=27");
     const thrillers = await fetchData("discover/movie", "&with_genres=53");
-    console.log(horrors.results);
     return body.insertAdjacentHTML(
       "beforeend",
       `

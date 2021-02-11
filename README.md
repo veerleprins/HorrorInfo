@@ -27,7 +27,11 @@ This repository shows a web application about movies with the API from [The Movi
 
 ### Actor diagram
 
+<img width="1624" alt="The Actor diagram of my code." src="https://user-images.githubusercontent.com/35265583/107700574-f29b2180-6cb7-11eb-8f36-661a2fccc218.png">
+
 ### Interaction diagram
+
+<img width="1624" alt="The Interaction diagram of my code." src="https://user-images.githubusercontent.com/35265583/107700576-f333b800-6cb7-11eb-93d0-e6dfd38e1288.png">
 
 ## :link: API
 
