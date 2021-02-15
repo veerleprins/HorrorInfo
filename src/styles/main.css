@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+
 :root {
   --primary: #fff;
   --secondary: #000;
   --gradient-1: #002265;
+  --gradient-2: #7b0000;
 }
 
 * {
@@ -15,32 +18,50 @@
 }
 
 html {
-  background: linear-gradient(var(--gradient-1), var(--secondary));
+  background: linear-gradient(
+    var(--secondary),
+    var(--gradient-2),
+    var(--secondary)
+  );
   color: var(--primary);
-  height: 100vh;
 }
 
 /*******************************************************
                         HEADER:
 ********************************************************/
 
+header {
+  height: 45vh;
+  background: var(--secondary);
+  background-image: url("../images/header-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  box-shadow: 0 0 40px 22px #080811;
+  margin: 4em 0em 2em 0em;
+}
+
+header::after {
+  content: "";
+  background: var(--secondary);
+  position: absolute;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+}
+
 h1 {
-  font-family: "Amatic SC", cursive;
+  /* font-family: "Amatic SC", cursive; */
+  font-family: "Reggae One", cursive;
   text-align: center;
   font-size: 5em;
   font-weight: normal;
-}
-
-body::before {
-  content: "";
-  background-image: url("../images/Moon.svg");
-  background-repeat: no-repeat;
-  display: block;
   position: absolute;
-  z-index: -1;
-  right: 0px;
-  width: 300px;
-  height: 300px;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 /*******************************************************
@@ -53,7 +74,7 @@ h2 {
 }
 
 main {
-  padding: 0px 100px;
+  padding: 0px 1em;
 }
 
 main section h2 {
@@ -61,7 +82,9 @@ main section h2 {
 }
 
 main section ul {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
 }
 
 main section ul li {
@@ -70,6 +93,12 @@ main section ul li {
   margin: 10px;
   background-color: black;
   border-radius: 0.5em;
+  display: grid;
+  justify-content: center;
+}
+
+main section ul li img {
+  width: 300px;
 }
 
 /*******************************************************
