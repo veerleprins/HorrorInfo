@@ -1,14 +1,31 @@
-export const createItems = (data, type) => {
+// Internals:
+import { posterPath } from "../config/config";
+
+// Components:
+import { createFooter } from "../components/organisms/footer";
+import { createHeader } from "../components/organisms/header";
+
+export const createItems = (data, parent) => {
   // This function creates the elements :
-  let parent = document.getElementsByClassName(type);
-  data.results.forEach((element) => {
+  const ul = document.createElement("ul");
+  const section = document.createElement("section");
+  const main = document.createElement("main");
+  data.forEach((element) => {
     let li = document.createElement("li");
     let img = document.createElement("img");
-    img.setAttribute(
-      "src",
-      `https://image.tmdb.org/t/p/w342/${element.poster_path}`
-    );
+    let title = document.createElement("h3");
+    let text = document.createTextNode(element.title);
+    img.setAttribute("src", `${posterPath}${element.poster}`);
+    title.appendChild(text);
+    li.appendChild(title);
     li.appendChild(img);
-    parent[0].appendChild(li);
+    ul.appendChild(li);
   });
+  section.appendChild(ul);
+  main.appendChild(section);
+  const footer = createFooter();
+  const header = createHeader();
+  parent.prepend(header);
+  header.after(main);
+  main.after(footer);
 };

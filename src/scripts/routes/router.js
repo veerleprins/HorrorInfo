@@ -14,7 +14,7 @@ export const Router = () => {
     router
       .on({
         "/": homePage(body[0], router),
-        "/movie:id": detailPage(body[0], router),
+        "/movie": detailPage(body[0], router),
         "/error": errorPage(body[0], router),
       })
       .notFound(() => {
@@ -22,7 +22,6 @@ export const Router = () => {
       })
       .resolve();
   } catch (err) {
-    console.error(err);
     throw new Error(err);
   }
 };

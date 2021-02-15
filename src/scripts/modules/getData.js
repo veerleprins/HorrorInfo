@@ -1,14 +1,14 @@
 // Constants
-import { API_KEY } from "./apiKey";
+import { URL, KEY, lang } from "../config/config";
 
 export const fetchData = async (term, params) => {
   // This function fetches the data and returns a
-  // json version of the response :
-  const URL = `https://api.themoviedb.org/3/${term}?api_key=${API_KEY}${params}&language=en-US&page=1`;
+  // json version of the response.
+  const endpoint = `${URL}${term}${KEY}${params}${lang}`;
   try {
-    const response = await fetch(URL);
+    const response = await fetch(endpoint);
     return await response.json();
   } catch (err) {
-    return console.error("Something went wrong: ", err);
+    next(err);
   }
 };
