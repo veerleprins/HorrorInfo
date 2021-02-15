@@ -17,6 +17,9 @@
   "bugs": {
     "url": "https://github.com/veerleprins/web-app-from-scratch-2021/issues"
   },
+  "browserslist": [
+    "since 2017-06"
+  ],
   "homepage": "https://github.com/veerleprins/web-app-from-scratch-2021#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
