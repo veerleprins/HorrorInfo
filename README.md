@@ -95,6 +95,7 @@ The sources I've used to create this web application:
 - 🚀 Getting Started. (n.d.). Parcel.Js. Retrieved 2 February 2021, from https://parceljs.org/getting_started.html
 - Schepenaar, W. (2018, 12 juni). Server-side vs Client-side Routing - Wilbert Schepenaar. Medium. https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f
 - npm: navigo. (2021, 7 februari). npm. https://www.npmjs.com/package/navigo
+- MDN. (z.d.). Array.prototype.sort() - JavaScript | MDN. MDN Web Docs. Geraadpleegd op 30 november 2020, van https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
 ## :lock: License
 
