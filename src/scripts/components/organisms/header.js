@@ -3,15 +3,19 @@
 
 // Components:
 // import { imgLink } from "../molecules/img-link";
-import { textElement } from "../atoms/text";
+import { inputElement } from "../atoms/input";
 
 export const createHeader = () => {
   const header = document.createElement("header");
-  const title = textElement("h1", "Welke horror film?");
+  const article = inputElement(
+    "h1",
+    "Welke horror film wil je kijken?",
+    "Search movies..."
+  );
 
   // Wat moet er in?
   // - Logo -> img link
 
-  header.appendChild(title);
+  header.appendChild(article);
   return header;
 };
