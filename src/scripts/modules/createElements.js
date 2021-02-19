@@ -1,7 +1,7 @@
-// Internals:
+// Internals
 import { posterPath } from "../config/config";
 
-// Components:
+// Components
 import { createFooter } from "../components/organisms/footer";
 import { createHeader } from "../components/organisms/header";
 
