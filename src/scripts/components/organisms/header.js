@@ -1,8 +1,4 @@
-// Internals:
-// const mdbLogo = require("../../../images/TheMovieDB-AltLong.svg");
-
-// Components:
-// import { imgLink } from "../molecules/img-link";
+// Components
 import { inputElement } from "../atoms/input";
 
 export const createHeader = () => {
@@ -12,9 +8,6 @@ export const createHeader = () => {
     "Welke horror film wil je kijken?",
     "Search movies..."
   );
-
-  // Wat moet er in?
-  // - Logo -> img link
 
   header.appendChild(article);
   return header;
