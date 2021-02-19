@@ -1,6 +1,6 @@
 ## Web Apps from Scratch - 2021
 
-<!-- <img width="1624" alt="Screenshot of the page with the visualizations." src="https://user-images.githubusercontent.com/35265583/104816885-454efe00-581e-11eb-8c93-da6a5e05cfeb.png"> -->
+<img width="1680" alt="Screenshot of the website" src="https://user-images.githubusercontent.com/35265583/108513385-d3595100-72c2-11eb-9f9d-45d906050032.png">
 
 ## Table of contents:
 
