@@ -3,19 +3,19 @@ import Navigo from "navigo";
 
 // Routes
 import { homePage } from "../views/homePage";
-import { detailPage } from "../views/detailPage";
+import { moviePage } from "../views/moviePage";
 import { errorPage } from "../views/errorPage";
 
 export const Router = () => {
   const router = new Navigo("/", false);
-  const body = document.getElementsByTagName("body");
+  const body = document.querySelector("body");
 
   try {
     router
       .on({
-        "/": homePage(body[0], router),
-        "/movie": detailPage(body[0], router),
-        "/error": errorPage(body[0], router),
+        "/": homePage(body),
+        "/movie": moviePage(body),
+        "/error": errorPage(body),
       })
       .notFound(() => {
         router.navigate("/error");
