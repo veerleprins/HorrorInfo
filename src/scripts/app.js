@@ -6,7 +6,3 @@ const init = () => {
 };
 
 init();
-
-//   "movie/popular"
-//   "movie/top_rated"
-//   "movie/upcoming"
