@@ -1,7 +1,7 @@
-// Internals:
+// Internals
 const mdbLogo = require("../../../images/TheMovieDB-AltLong.svg");
 
-// Components:
+// Components
 import { textElement } from "../atoms/text";
 import { imgLink } from "../molecules/img-link";
 import { textLink } from "../molecules/link-text";
