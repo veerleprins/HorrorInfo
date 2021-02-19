@@ -31,7 +31,7 @@ html {
                         HEADER:
 ********************************************************/
 
-header {
+.home header {
   height: 45vh;
   background: var(--secondary);
   background-image: url("../images/header-img.jpg");
@@ -44,7 +44,7 @@ header {
   margin: 4em 0em 2em 0em;
 }
 
-header::after {
+.home header::after {
   content: "";
   background: var(--secondary);
   position: absolute;
@@ -55,7 +55,7 @@ header::after {
   height: 100%;
 }
 
-header article {
+.home header article {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@ header article {
   padding: 1em;
 }
 
-header article h1 {
+.home header article h1 {
   /* font-family: "Amatic SC", cursive; */
   font-family: "Reggae One", cursive;
   /* font-size: 5em; */
@@ -77,14 +77,14 @@ header article h1 {
   margin-bottom: 1em;
 }
 
-header article div {
+.home header article div {
   width: 50%;
   height: 50px;
 
   position: relative;
 }
 
-header article div input {
+.home header article div input {
   background-color: var(--secondary);
   color: var(--primary);
   border-radius: 5px;
@@ -93,7 +93,7 @@ header article div input {
   padding: 10px;
 }
 
-header article div button {
+.home header article div button {
   background: transparent;
   cursor: pointer;
   border: none;
@@ -103,7 +103,7 @@ header article div button {
   right: 0;
 }
 
-header article button::after {
+.home header article button::after {
   content: "\f002";
   font-family: FontAwesome;
   position: absolute;
@@ -115,7 +115,7 @@ header article button::after {
   transform: translateX(-50%) translateY(-50%);
 }
 
-header article div input:focus {
+.home header article div input:focus {
   /* outline: solid 10px var(--gradient-2); */
   outline: none;
   background-color: #490000;
