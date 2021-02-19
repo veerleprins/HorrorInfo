@@ -96,9 +96,8 @@ The sources I've used to create this web application:
 - Schepenaar, W. (2018, 12 juni). Server-side vs Client-side Routing - Wilbert Schepenaar. Medium. https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f
 - npm: navigo. (2021, 7 februari). npm. https://www.npmjs.com/package/navigo
 - MDN. (z.d.). Array.prototype.sort() - JavaScript | MDN. MDN Web Docs. Geraadpleegd op 30 november 2020, van https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+- Kadimi, N. [nabil-kadimi]. (2013, 11 augustus). How to make input text border with CSS when it’s OnFocus [Stack Overflow post]. Stack Overflow. https://stackoverflow.com/questions/18173816/how-to-make-input-text-border-with-css-when-its-onfocus
 
 ## :lock: License
 
 This repo is licensed as [MIT](https://github.com/veerleprins/web-app-from-scratch-2021/blob/master/LICENSE) by :copyright: [Veerle Prins](https://github.com/veerleprins), 2020
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
