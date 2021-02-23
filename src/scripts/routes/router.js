@@ -2,9 +2,7 @@
 import Navigo from "navigo";
 
 // Routes
-import { homePage } from "../views/homePage";
-import { moviePage } from "../views/moviePage";
-import { errorPage } from "../views/errorPage";
+import { homePage, moviePage, errorPage } from "../views/exports";
 
 export const Router = () => {
   const router = new Navigo("/", false);
@@ -14,7 +12,7 @@ export const Router = () => {
     router
       .on({
         "/": homePage(body),
-        "/movie": moviePage(body),
+        "/movie/:id": moviePage(body),
         "/error": errorPage(body),
       })
       .notFound(() => {
