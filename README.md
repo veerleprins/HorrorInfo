@@ -97,6 +97,9 @@ The sources I've used to create this web application:
 - npm: navigo. (2021, 7 februari). npm. https://www.npmjs.com/package/navigo
 - MDN. (z.d.). Array.prototype.sort() - JavaScript | MDN. MDN Web Docs. Geraadpleegd op 30 november 2020, van https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 - Kadimi, N. [nabil-kadimi]. (2013, 11 augustus). How to make input text border with CSS when it’s OnFocus [Stack Overflow post]. Stack Overflow. https://stackoverflow.com/questions/18173816/how-to-make-input-text-border-with-css-when-its-onfocus
+- Unknown, E. [Elias]. (2019, 25 november). Fetch multiple URLs at the same time? [StackOverflow Post]. Stack Overflow. https://stackoverflow.com/questions/59037553/fetch-multiple-urls-at-the-same-time
+- Wayne, A. [alex-wayne]. (2015, 2 juni). Return only numbers from string [StackOverflow Post]. Stack Overflow. https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
+- Gibolt, [Gibolt]. (2009, 6 maart). Can I insert elements to the beginning of an element using .appendChild()? [StackOverflow Post]. Stack Overflow. https://stackoverflow.com/questions/618089/can-i-insert-elements-to-the-beginning-of-an-element-using-appendchild
 
 ## :lock: License
 
