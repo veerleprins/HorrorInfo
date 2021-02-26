@@ -161,10 +161,32 @@ html {
 
 .movie-page header {
   background-color: var(--secondary);
-  height: 100px;
-  padding: 1em;
   position: relative;
-  margin-bottom: 10em;
+  height: 50vh;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.movie-page header a {
+  background-color: var(--gradient-2);
+  font-family: "Girassol", cursive;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  padding-left: 30px;
+  padding: 10px 35px 10px 25px;
+  border-radius: 2px;
+}
+
+.movie-page header a::before {
+  --width: 25px;
+  content: "\f053";
+  font-family: FontAwesome;
+  display: inline-block;
+  top: calc(50% - var(--width) / 2);
+  left: 10px;
+  width: var(--width);
+  height: var(--width);
 }
 
 .movie-page header::before,
@@ -184,6 +206,7 @@ html {
 .movie-page header::before {
   transform: rotate(-90deg);
   left: 10px;
+  bottom: 20px;
 }
 
 .movie-page header::after {
@@ -193,6 +216,7 @@ html {
 }
 
 .movie-page header h1 {
+  margin-top: 1em;
   background-color: #191919;
   font-family: "Girassol", cursive;
   text-align: center;
@@ -214,7 +238,7 @@ html {
 }
 
 .movie-page main {
-  padding: 0 1em;
+  margin: 0 1em;
 }
 
 .movie-page main section:first-child {
@@ -341,4 +365,19 @@ footer a:hover {
 footer a img {
   width: 200px;
   margin: 1em;
+}
+
+footer .copy {
+  position: relative;
+}
+
+footer .copy::before {
+  --width: 15px;
+  content: "\f1f9";
+  position: absolute;
+  font-family: FontAwesome;
+  width: 15px;
+  height: 15px;
+  top: calc(50% - var(--width) / 2);
+  left: -20px;
 }
