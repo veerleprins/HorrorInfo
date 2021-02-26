@@ -1,13 +1,10 @@
 // Modules
-import { getMovieInfo } from "../modules/posterData";
-import { getRecommendations } from "../modules/recommendationData";
+import { getData } from "../modules/movieData";
 
 // Components
-import { createHeader } from "../components/organisms/headerDetail";
-import { createFooter } from "../components/organisms/footer";
 import { createOverview } from "../components/organisms/overviewDetail";
 import { createSection } from "../components/organisms/sectionTwo";
-import { getProviders } from "../modules/providerData";
+import { detailTemplate } from "../components/templates/detail";
 
 export const moviePage = (body) => {
   return async () => {
@@ -16,24 +13,17 @@ export const moviePage = (body) => {
     body.classList.add("movie-page");
 
     // Get data:
-    const movieData = await getMovieInfo();
-    const recommendations = await getRecommendations();
-    const providerData = await getProviders();
+    const [movie, recommendations, providers] = await getData();
 
+    // Creating the main:
+    const section1 = createOverview(movie, providers);
+    const section2 = createSection(recommendations);
     const main = document.createElement("main");
 
-    // Creating the header & footer:
-    const header = createHeader(movieData.original_title);
-    const section1 = createOverview(movieData, providerData);
-    const section2 = createSection(recommendations);
-    const footer = createFooter();
-
     // Appending the elements to the page:
-    body.prepend(header);
     main.appendChild(section1);
     main.appendChild(section2);
-    header.after(main);
-    main.after(footer);
+    detailTemplate(body, main, movie);
     return;
   };
 };
