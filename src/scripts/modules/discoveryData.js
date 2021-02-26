@@ -3,28 +3,25 @@ import { param } from "../config/config";
 
 // Modules
 import { fetchData } from "./collecting/collect";
-import { getNested } from "./cleaning/clean";
-import { getNecessary, sortArray } from "./cleaning/clean";
+import { getNecessary, sortArray, getNested } from "./cleaning/clean";
 
 export const getDiscoveryMovies = async () => {
-  // This function fetches a similar endpoint five times using
-  // a Promise.all and cleans the data so that it can be sent
-  // back to the home view:
+  //This function fetches the same endpoint five times using
+  // promise.all, cleans the data and returns it:
   try {
+    // Fetch all data:
     const [data1, data2, data3, data4, data5] = await Promise.all(
       [1, 2, 3, 4, 5].map((page) =>
         fetchData("discover/movie", `${param}${page}`)
       )
     );
-    const totalArray = getNested([
-      data1.results,
-      data2.results,
-      data3.results,
-      data4.results,
-      data5.results,
-    ]);
-    const necessaryData = getNecessary(totalArray);
-    return sortArray(necessaryData, "avgVoted").slice(0, 10);
+
+    // Clean all data:
+    const merged = getNested([data1, data2, data3, data4, data5], "results");
+    const required = getNecessary(merged);
+    const data = sortArray(required, "avgVoted").slice(0, 10);
+
+    return data;
   } catch (err) {
     console.error(err);
   }
