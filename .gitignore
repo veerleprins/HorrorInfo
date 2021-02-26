@@ -4,8 +4,6 @@ _assignment/
 dist/
 .cache/
 
-apiKey.js
-
 .npm
 .env
 .env.test

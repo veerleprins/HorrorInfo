@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Girassol&display=swap");
 
 :root {
   --primary: #fff;
@@ -15,36 +15,30 @@
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
+  font-weight: normal;
   font-size: 1em;
 }
 
 html {
-  background: linear-gradient(
-    var(--secondary),
-    var(--gradient-2),
-    var(--secondary)
-  );
+  background-color: var(--secondary);
   color: var(--primary);
 }
 
 /*******************************************************
-                        HEADER:
+                  OVERVIEW HEADER:
 ********************************************************/
 
-header {
+.home-page header {
   height: 45vh;
   background: var(--secondary);
   background-image: url("../images/header-img.jpg");
-  filter: contrast(100%);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
-  box-shadow: 0 0 40px 22px #080811;
-  margin: 4em 0em 2em 0em;
 }
 
-header::after {
+.home-page header::after {
   content: "";
   background: var(--secondary);
   position: absolute;
@@ -55,7 +49,7 @@ header::after {
   height: 100%;
 }
 
-header article {
+.home-page header article {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -68,23 +62,20 @@ header article {
   padding: 1em;
 }
 
-header article h1 {
-  /* font-family: "Amatic SC", cursive; */
-  font-family: "Reggae One", cursive;
-  /* font-size: 5em; */
+.home-page header article h1 {
+  font-family: "Girassol", cursive;
   font-size: clamp(2.5rem, 10vw, 5rem);
   font-weight: normal;
   margin-bottom: 1em;
 }
 
-header article div {
-  width: 50%;
-  height: 50px;
-
+.home-page header article div {
   position: relative;
+  height: 50px;
+  width: 50%;
 }
 
-header article div input {
+.home-page header article div input {
   background-color: var(--secondary);
   color: var(--primary);
   border-radius: 5px;
@@ -93,7 +84,7 @@ header article div input {
   padding: 10px;
 }
 
-header article div button {
+.home-page header article div button {
   background: transparent;
   cursor: pointer;
   border: none;
@@ -103,11 +94,11 @@ header article div button {
   right: 0;
 }
 
-header article button::after {
+.home-page header article button::after {
   content: "\f002";
   font-family: FontAwesome;
   position: absolute;
-  color: white;
+  color: var(--primary);
   display: block;
   font-size: 1.5em;
   top: 50%;
@@ -115,49 +106,207 @@ header article button::after {
   transform: translateX(-50%) translateY(-50%);
 }
 
-header article div input:focus {
-  /* outline: solid 10px var(--gradient-2); */
+.home-page header article div input:focus {
+  background-color: var(--gradient-2);
   outline: none;
-  background-color: #490000;
-  /* filter: contrast(300%); */
 }
 
 /*******************************************************
-                        MAIN:
+                    OVERVIEW MAIN:
 ********************************************************/
 
-h2 {
-  font-family: "Amatic SC", cursive;
+.home-page h2 {
+  font-family: "Girassol", cursive;
   font-weight: normal;
 }
 
-main {
+.home-page main {
   padding: 0px 1em;
 }
 
-main section h2 {
-  margin: 0.5em 0px;
+.home-page main section h2 {
+  margin: 1em;
+  font-size: 2.5em;
 }
 
-main section ul {
+.home-page main section ul {
   display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr; */
   grid-template-columns: repeat(auto-fit, minmax(10em, 25em));
   justify-content: center;
 }
 
-main section ul li {
+.home-page main section ul li {
+  display: grid;
+  justify-content: center;
   list-style-type: none;
   padding: 20px;
   margin: 10px;
-  background-color: black;
-  border-radius: 0.5em;
-  display: grid;
-  justify-content: center;
 }
 
-main section ul li img {
+.home-page main section ul li img {
   width: 300px;
+}
+
+/*******************************************************
+                    ERROR MAIN:
+********************************************************/
+
+.error-page {
+  height: 100vh;
+}
+
+/*******************************************************
+                  MOVIE HEADER:
+********************************************************/
+
+.movie-page header {
+  background-color: var(--secondary);
+  height: 100px;
+  padding: 1em;
+  position: relative;
+  margin-bottom: 10em;
+}
+
+.movie-page header::before,
+.movie-page header::after {
+  content: "";
+  background-image: url("../images/scratch.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  z-index: 3;
+  width: 4em;
+  height: 4em;
+}
+
+.movie-page header::before {
+  transform: rotate(-90deg);
+  left: 10px;
+}
+
+.movie-page header::after {
+  transform: rotate(100deg);
+  top: 110px;
+  right: 10px;
+}
+
+.movie-page header h1 {
+  background-color: #191919;
+  font-family: "Girassol", cursive;
+  text-align: center;
+  color: #892417;
+  font-size: clamp(3.5rem, 5vw, 5rem);
+  padding: 0.5em;
+}
+
+/*******************************************************
+                    MOVIE MAIN:
+********************************************************/
+
+.movie-page {
+  height: 100vh;
+}
+
+.movie-page h2 {
+  font-family: "Girassol", cursive;
+}
+
+.movie-page main {
+  padding: 0 1em;
+}
+
+.movie-page main section:first-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 4em;
+  height: 50%;
+}
+
+.movie-page main section:nth-child(2) ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.movie-page main section:nth-child(2) ul li {
+  list-style-type: none;
+}
+
+.movie-page main section:nth-child(2) ul li a img {
+  max-width: 250px;
+}
+
+.movie-page main section:first-child article {
+  order: 2;
+}
+
+.movie-page main section:first-child article h2 {
+  font-size: clamp(2rem, 1vw, 1rem);
+}
+
+.movie-page main section:first-child article h3 {
+  font-family: "Girassol", cursive;
+  font-size: 20px;
+}
+
+.movie-page main section:first-child article ul {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.movie-page main section:first-child article ul li {
+  list-style-type: none;
+  position: absolute;
+}
+
+.movie-page main section:first-child article ul li:first-child {
+  left: 0;
+}
+
+.movie-page main section:first-child article ul li:nth-child(2) {
+  left: 45px;
+}
+
+.movie-page main section:first-child article ul li:nth-child(3) {
+  left: 90px;
+}
+
+.movie-page main section:first-child article img {
+  margin-top: 1em;
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(-4px 0px 3px #262626);
+}
+
+.movie-page main section:first-child article img:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.movie-page main section:first-child img {
+  order: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.movie-page .vote {
+  position: relative;
+  padding-left: 30px;
+}
+
+.movie-page .vote::before {
+  content: "";
+  background-image: url("../images/star-rating.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  left: 0px;
 }
 
 /*******************************************************
@@ -166,7 +315,7 @@ main section ul li img {
 
 footer {
   display: flex;
-  background-color: black;
+  background-color: var(--secondary);
   flex-direction: column;
   align-items: center;
   border-top: 1px solid rgb(96, 96, 96);

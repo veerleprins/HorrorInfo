@@ -1,4 +1,4 @@
-// Components:
+// Components
 import { textElement } from "./text";
 
 export const inputElement = (tag, text, placeText) => {
