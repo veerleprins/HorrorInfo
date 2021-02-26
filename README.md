@@ -1,10 +1,17 @@
-## Web Apps from Scratch - 2021
+## Web Application from Scratch:
 
-<img width="1680" alt="Screenshot of the website" src="https://user-images.githubusercontent.com/35265583/108513385-d3595100-72c2-11eb-9f9d-45d906050032.png">
+<img width="1657" alt="Screenshot of the application." src="https://user-images.githubusercontent.com/35265583/109234284-ada0e000-77cb-11eb-8f73-b1f0b95c71b9.png">
+
+## :black_nib: Short Description
+
+For the Web Apps from Scratch course within the Minor Web Design & Development ([@cmda-minor-web](https://github.com/cmda-minor-web)) we learn about Designing and Developing web applications from scratch without using frameworks or unnecessary libraries.
+
+This repository shows a web application about movies with the API from [The Movie DB](https://www.themoviedb.org/). It is not necessary to have an account to view this application.
 
 ## Table of contents:
 
-- [Description](#black_nib-description)
+<!-- - [Description](#black_nib-description) -->
+
 - [Feature](#small_orange_diamond-feature)
 - [Diagrams](#book-feature)
 - [Datasets](#link-datasets)
@@ -12,12 +19,6 @@
 - [Deploy](#globe_with_meridians-deploy)
 - [Future features](#small_blue_diamond-future-features)
 - [Sources](#books-sources)
-
-## :black_nib: Description
-
-For the Web Apps from Scratch course within the Minor Web Design & Development ([@cmda-minor-web](https://github.com/cmda-minor-web)) we learn about Designing and Developing web applications from scratch without using frameworks or unnecessary libraries.
-
-This repository shows a web application about movies with the API from [The Movie DB](https://www.themoviedb.org/).
 
 ## :small_orange_diamond: Feature
 
@@ -37,7 +38,16 @@ This repository shows a web application about movies with the API from [The Movi
 
 The API that was used is the API supplied by The Movie DB. These are public APIs and can be found at the link below:
 
-https://developers.themoviedb.org/3/movies
+https://developers.themoviedb.org/3/
+
+This has been my 'standard' endpoint to which several parameters have been added to retrieve the data. The parameters below were used to obtain the various information:
+
+- `discover/movie`
+- `movie/${movieID}`
+- `movie/${movieID}/recommendations`
+- `movie/${movieID}/watch/providers`
+
+Based on these parameters, it can be seen that I show discovery movies, a specific movie, recommended movies based on a specific movie and the places where this specific movie can be viewed.
 
 ## :arrow_down: Install
 
@@ -100,6 +110,11 @@ The sources I've used to create this web application:
 - Unknown, E. [Elias]. (2019, 25 november). Fetch multiple URLs at the same time? [StackOverflow Post]. Stack Overflow. https://stackoverflow.com/questions/59037553/fetch-multiple-urls-at-the-same-time
 - Wayne, A. [alex-wayne]. (2015, 2 juni). Return only numbers from string [StackOverflow Post]. Stack Overflow. https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
 - Gibolt, [Gibolt]. (2009, 6 maart). Can I insert elements to the beginning of an element using .appendChild()? [StackOverflow Post]. Stack Overflow. https://stackoverflow.com/questions/618089/can-i-insert-elements-to-the-beginning-of-an-element-using-appendchild
+- Aziz, [Aziz]. (2016, 12 september). How to use es6 import for images [Stack Overflow post]. Stack Overflow. https://stackoverflow.com/questions/39458511/how-to-use-es6-import-for-images
+- ForYourOwnGood. (2009, 18 januari). How do I check if an object has a key in JavaScript? [Stack Overflow post]. Stack Overflow. https://stackoverflow.com/questions/455338/how-do-i-check-if-an-object-has-a-key-in-javascript
+- Seeklogo. (z.d.). [Illustrations]. Seek Logo. https://seeklogo.com/
+- Salvadó, C. C. [christian-c-salvadó]. (2011, 22 augustus). Javascript Regular Expression Remove Spaces [Stack Overflow post]. Stack Overflow. https://stackoverflow.com/questions/7151159/javascript-regular-expression-remove-spaces
+- Shah, A. (2020, 6 juni). How to remove duplicates from an array in JavaScript. Atta-Ur-Rehman Shah. https://attacomsian.com/blog/javascript-remove-duplicates-from-array
 
 ## :lock: License
 
