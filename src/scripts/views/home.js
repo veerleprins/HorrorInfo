@@ -1,5 +1,5 @@
 // Modules
-import { getDiscovery } from "../modules/discoveryData";
+import { getDiscoveryMovies } from "../modules/discoveryData";
 
 // Components
 import { createHeader } from "../components/organisms/header";
@@ -13,7 +13,7 @@ export const homePage = (body) => {
     body.classList.add("home-page");
 
     // Getting the cleaned data:
-    const moviesData = await getDiscovery();
+    const moviesData = await getDiscoveryMovies();
 
     // Creating the elements:
     const header = createHeader();
