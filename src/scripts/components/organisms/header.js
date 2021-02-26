@@ -1,8 +1,10 @@
 // Components
-import { inputElement } from "../atoms/input";
+import { inputElement } from "../molecules/input";
+import { createElement } from "../atoms/element";
 
 export const createHeader = () => {
-  const header = document.createElement("header");
+  // This function builds the header of the home page:
+  const header = createElement("header");
   const article = inputElement(
     "h1",
     "What horror are you looking for?",
