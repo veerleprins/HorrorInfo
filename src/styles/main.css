@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Girassol&display=swap");
 
 :root {
   --primary: #fff;
@@ -62,7 +63,7 @@ html {
 }
 
 .home-page header article h1 {
-  font-family: "Reggae One", cursive;
+  font-family: "Girassol", cursive;
   font-size: clamp(2.5rem, 10vw, 5rem);
   font-weight: normal;
   margin-bottom: 1em;
@@ -115,7 +116,7 @@ html {
 ********************************************************/
 
 .home-page h2 {
-  font-family: "Amatic SC", cursive;
+  font-family: "Girassol", cursive;
   font-weight: normal;
 }
 
@@ -161,14 +162,43 @@ html {
 .movie-page header {
   background-color: var(--secondary);
   height: 100px;
-  display: grid;
-  align-items: center;
+  padding: 1em;
+  position: relative;
+  margin-bottom: 10em;
+}
+
+.movie-page header::before,
+.movie-page header::after {
+  content: "";
+  background-image: url("../images/scratch.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  z-index: 3;
+  width: 4em;
+  height: 4em;
+}
+
+.movie-page header::before {
+  transform: rotate(-90deg);
+  left: 10px;
+}
+
+.movie-page header::after {
+  transform: rotate(100deg);
+  top: 110px;
+  right: 10px;
 }
 
 .movie-page header h1 {
-  font-family: "Amatic SC", cursive;
+  background-color: #191919;
+  font-family: "Girassol", cursive;
   text-align: center;
-  font-size: clamp(2.5rem, 4vw, 4rem);
+  color: #892417;
+  font-size: clamp(3.5rem, 5vw, 5rem);
+  padding: 0.5em;
 }
 
 /*******************************************************
@@ -177,6 +207,106 @@ html {
 
 .movie-page {
   height: 100vh;
+}
+
+.movie-page h2 {
+  font-family: "Girassol", cursive;
+}
+
+.movie-page main {
+  padding: 0 1em;
+}
+
+.movie-page main section:first-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 4em;
+  height: 50%;
+}
+
+.movie-page main section:nth-child(2) ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.movie-page main section:nth-child(2) ul li {
+  list-style-type: none;
+}
+
+.movie-page main section:nth-child(2) ul li a img {
+  max-width: 250px;
+}
+
+.movie-page main section:first-child article {
+  order: 2;
+}
+
+.movie-page main section:first-child article h2 {
+  font-size: clamp(2rem, 1vw, 1rem);
+}
+
+.movie-page main section:first-child article h3 {
+  font-family: "Girassol", cursive;
+  font-size: 20px;
+}
+
+.movie-page main section:first-child article ul {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.movie-page main section:first-child article ul li {
+  list-style-type: none;
+  position: absolute;
+}
+
+.movie-page main section:first-child article ul li:first-child {
+  left: 0;
+}
+
+.movie-page main section:first-child article ul li:nth-child(2) {
+  left: 45px;
+}
+
+.movie-page main section:first-child article ul li:nth-child(3) {
+  left: 90px;
+}
+
+.movie-page main section:first-child article img {
+  margin-top: 1em;
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(-4px 0px 3px #262626);
+}
+
+.movie-page main section:first-child article img:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.movie-page main section:first-child img {
+  order: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.movie-page .vote {
+  position: relative;
+  padding-left: 30px;
+}
+
+.movie-page .vote::before {
+  content: "";
+  background-image: url("../images/star-rating.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  left: 0px;
 }
 
 /*******************************************************
