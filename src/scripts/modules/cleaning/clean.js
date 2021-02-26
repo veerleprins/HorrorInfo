@@ -4,13 +4,13 @@ export const sortArray = (dataArray, item) => {
   return dataArray.sort((min, max) => max[item] - min[item]);
 };
 
-export const getNested = (dataArray) => {
+export const getNested = (dataArray, key) => {
   // This function grabs all single items contained
   // in a nested array and adds them to a new array
   // named 'newDataArray':
   const newDataArray = [];
   dataArray.forEach((item) => {
-    item.forEach((obj) => {
+    item[key].forEach((obj) => {
       newDataArray.push(obj);
     });
   });
@@ -62,4 +62,18 @@ export const getNecessary = (dataArray) => {
       voted: item.vote_count,
     };
   });
+};
+
+export const checkKey = (dataObject) => {
+  // This function checks if a certain key is present in the
+  // object, then calls the function 'getList' and returns its output:
+  let newList = [];
+  if (dataObject.NL) {
+    newList = getList(
+      dataObject.NL,
+      ["buy", "rent", "flatrate"],
+      "provider_name"
+    );
+  }
+  return newList;
 };
