@@ -2,9 +2,8 @@
 import { getDiscoveryMovies } from "../modules/discoveryData";
 
 // Components
-import { createHeader } from "../components/organisms/header";
-import { createFooter } from "../components/organisms/footer";
-import { createOverview } from "../components/organisms/overview";
+import { createOverview } from "../components/organisms/overviewHome";
+import { overviewTemplate } from "../components/templates/overview";
 
 export const homePage = (body) => {
   return async () => {
@@ -13,17 +12,13 @@ export const homePage = (body) => {
     body.classList.add("home-page");
 
     // Getting the cleaned data:
-    const moviesData = await getDiscoveryMovies();
+    const discoveryData = await getDiscoveryMovies();
 
-    // Creating the elements:
-    const header = createHeader();
-    const footer = createFooter();
-    const overview = createOverview(moviesData);
+    // Creating the main:
+    const overview = createOverview(discoveryData);
 
     // Appending the elements to the page:
-    body.prepend(header);
-    header.after(overview);
-    overview.after(footer);
+    overviewTemplate(body, overview);
     return;
   };
 };
