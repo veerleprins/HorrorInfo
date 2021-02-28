@@ -9,7 +9,7 @@ export const createHeader = (movieTitle) => {
     { href: "/", "data-navigo": true },
     "Back"
   );
-  header.appendChild(backButton);
   header.appendChild(title);
+  header.appendChild(backButton);
   return header;
 };
