@@ -1,4 +1,4 @@
-// Components:
+// Components
 import { createElement } from "../atoms/element";
 
 export const createClickableIMG = (hrefURL, srcURL, altText) => {

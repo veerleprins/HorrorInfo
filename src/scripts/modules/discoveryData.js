@@ -3,7 +3,12 @@ import { param } from "../config/config";
 
 // Modules
 import { fetchData } from "./collecting/collect";
-import { getNecessary, sortArray, getNested } from "./cleaning/clean";
+import {
+  getNecessary,
+  sortArray,
+  getNested,
+  filterItem,
+} from "./cleaning/clean";
 
 export const getDiscoveryMovies = async () => {
   //This function fetches the same endpoint five times using
@@ -19,7 +24,8 @@ export const getDiscoveryMovies = async () => {
     // Clean all data:
     const merged = getNested([data1, data2, data3, data4, data5], "results");
     const required = getNecessary(merged);
-    const data = sortArray(required, "avgVoted").slice(0, 10);
+    const sorted = sortArray(required, "avgVoted");
+    const data = filterItem(sorted, "voted").slice(0, 10);
 
     return data;
   } catch (err) {

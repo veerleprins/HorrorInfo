@@ -1,25 +1,30 @@
 // Modules
-import { appendToElement } from "../../modules/appending/append";
+import { appendToElement } from "../../modules/helpers/append";
 
 // Components
 import { createElement } from "../atoms/element";
 
 export const createSecondArticle = (data) => {
   const article = createElement("article");
-
-  const firth3 = createElement("h3", {}, "Voting:");
-  const mark = createElement("p", { class: "vote" }, data.vote_average);
-  const secondh3 = createElement("h3", {}, "Vote count:");
-  const count = createElement("p", {}, data.vote_count);
-  const thirdh3 = createElement("h3", {}, "Status:");
-  const status = createElement("p", {}, data.status);
-  const lasth3 = createElement("h3", {}, "Release date:");
-  const release = createElement("p", {}, data.release_date);
-
-  appendToElement(
-    [firth3, mark, secondh3, count, thirdh3, status, lasth3, release],
-    article
+  const h3List = createListElements(
+    ["Voting:", "Vote count:", "Status:", "Release date:"],
+    "h3"
+  );
+  const pList = createListElements(
+    [data.vote_average, data.vote_count, data.status, data.release_date],
+    "p"
   );
 
+  const mark = createElement("p", { class: "vote" }, data.vote_average);
+
+  appendToElement([h3List[0], mark, h3List[1], pList[1]], article);
+  appendToElement([h3List[2], pList[2], h3List[3], pList[3]], article);
+
   return article;
+};
+
+const createListElements = (dataArray, tag) => {
+  return dataArray.map((text) => {
+    return createElement(tag, {}, text);
+  });
 };

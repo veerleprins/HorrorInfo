@@ -19,11 +19,11 @@ export const getData = async () => {
 
     // Clean all data:
     const providerList = checkKey(providerData.results);
-    const recommended = getNecessary(recommendedData.results).slice(0, 5);
-    const uniqueItems = getUnique(providerList);
-    const data = getReplaced(uniqueItems, "-");
+    const uniqueProviders = getUnique(providerList);
+    const cleanProviders = getReplaced(uniqueProviders, "-");
+    const cleanRecommended = getNecessary(recommendedData.results).slice(0, 5);
 
-    return [movieData, recommended, data];
+    return [movieData, cleanRecommended, cleanProviders];
   } catch (err) {
     console.error(err);
   }
