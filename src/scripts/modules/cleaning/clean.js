@@ -1,7 +1,7 @@
-export const sortArray = (dataArray, item) => {
+export const sortArray = (dataArray, value) => {
   // Sorts an array from the highest value to the lowest
   // value according to a specific item in the array.
-  return dataArray.sort((min, max) => max[item] - min[item]);
+  return dataArray.sort((min, max) => max[value] - min[value]);
 };
 
 export const getNested = (dataArray, key) => {
@@ -37,14 +37,14 @@ export const getUnique = (dataArray) => {
   // This function filters the unique value from
   // the dataArray and returns it as a new array:
   // Source: https://attacomsian.com/blog/javascript-remove-duplicates-from-array
-  return dataArray.filter((value, index) => {
-    return dataArray.indexOf(value) === index;
+  return dataArray.filter((item, index) => {
+    return dataArray.indexOf(item) === index;
   });
 };
 
 export const getReplaced = (dataArray, value) => {
   // This function changes all spaces in the 'dataArray'
-  // to the new 'item', changes everything to lowercase,
+  // to the new 'value', changes everything to lowercase,
   // and returns the new array:
   return dataArray.map((item) => {
     return item.replace(/\s/g, value).toLowerCase();
@@ -52,7 +52,7 @@ export const getReplaced = (dataArray, value) => {
 };
 
 export const getNecessary = (dataArray) => {
-  // Changes the names and returns only necessary items.
+  // Changes the names and returns only necessary items:
   return dataArray.map((item) => {
     return {
       id: item.id,
@@ -76,4 +76,12 @@ export const checkKey = (dataObject) => {
     );
   }
   return newList;
+};
+
+export const filterItem = (dataArray, value) => {
+  // This function filters the items from the dataArray and
+  // checks if a specific value is greater than 100:
+  return dataArray.filter((item) => {
+    return item[value] > 100;
+  });
 };
