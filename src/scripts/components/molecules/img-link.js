@@ -1,10 +1,9 @@
-// Components:
-import { imgElement } from "../atoms/img";
+// Components
+import { createElement } from "../atoms/element";
 
-export const imgLink = (url, imgPath, alt) => {
-  const link = document.createElement("a");
-  const img = imgElement(alt, imgPath);
-  link.setAttribute("href", url);
+export const createClickableIMG = (hrefURL, srcURL, altText) => {
+  const img = createElement("img", { src: srcURL, alt: altText });
+  const link = createElement("a", { href: hrefURL });
   link.appendChild(img);
   return link;
 };

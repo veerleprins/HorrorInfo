@@ -1,30 +1,32 @@
 // Internals
 const mdbLogo = require("../../../images/TheMovieDB-AltLong.svg");
 
+// Modules
+import { appendToElement } from "../../modules/helpers/append";
+
 // Components
-import { textElement } from "../atoms/text";
-import { imgLink } from "../molecules/img-link";
-import { textLink } from "../molecules/link-text";
+import { createElement } from "../atoms/element";
+import { createClickableIMG } from "../molecules/img-link";
+import { createLinkInText } from "../molecules/link-text";
 
 export const createFooter = () => {
-  const footer = document.createElement("footer");
-  const reference = textElement(
+  const footer = createElement("footer");
+  const reference = createElement(
     "p",
+    {},
     "This application uses the TMDb API but is not endorsed or certified by TMDb."
   );
-  const link = imgLink(
+  const link = createClickableIMG(
     "https://www.themoviedb.org/",
     mdbLogo,
     "Logo of The Movie DB."
   );
-  const paragraph = textLink(
+  const paragraph = createLinkInText(
     "https://github.com/veerleprins/",
     "Veerle Prins",
-    " , 2021"
+    ", 2021"
   );
 
-  footer.appendChild(reference);
-  footer.appendChild(link);
-  footer.appendChild(paragraph);
+  appendToElement([reference, link, paragraph], footer);
   return footer;
 };

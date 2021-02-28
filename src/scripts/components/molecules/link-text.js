@@ -1,11 +1,12 @@
 // Components:
-import { linkElement } from "../atoms/link";
+import { createElement } from "../atoms/element";
 
-export const textLink = (url, name, text) => {
-  const p = document.createElement("p");
-  const link2 = linkElement(url, name);
-  p.append("\u00A9 ");
-  p.append(link2);
-  p.append(text);
-  return p;
+export const createLinkInText = (url, name, text) => {
+  // This function adds a link element to a paragraph
+  // and returns the paragraph:
+  const paragraph = createElement("p", { class: "copy" });
+  const link = createElement("a", { href: url }, name);
+  paragraph.append(link);
+  paragraph.append(text);
+  return paragraph;
 };
