@@ -1,10 +1,13 @@
 // Internals
 const mdbLogo = require("../../../images/TheMovieDB-AltLong.svg");
 
+// Modules
+import { appendToElement } from "../../modules/helpers/append";
+
 // Components
 import { createElement } from "../atoms/element";
 import { createClickableIMG } from "../molecules/img-link";
-import { textLink } from "../molecules/link-text";
+import { createLinkInText } from "../molecules/link-text";
 
 export const createFooter = () => {
   const footer = createElement("footer");
@@ -18,14 +21,12 @@ export const createFooter = () => {
     mdbLogo,
     "Logo of The Movie DB."
   );
-  const paragraph = textLink(
+  const paragraph = createLinkInText(
     "https://github.com/veerleprins/",
     "Veerle Prins",
     ", 2021"
   );
 
-  footer.appendChild(reference);
-  footer.appendChild(link);
-  footer.appendChild(paragraph);
+  appendToElement([reference, link, paragraph], footer);
   return footer;
 };
