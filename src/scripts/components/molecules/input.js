@@ -1,7 +1,10 @@
+// Modules
+import { appendToElement } from "../../modules/helpers/append";
+
 // Components
 import { createElement } from "../atoms/element";
 
-export const inputElement = (tag, text, placeText) => {
+export const createInput = (tag, text, placeText) => {
   // Creating the elements
   const article = createElement("article");
   const button = createElement("button");
@@ -13,9 +16,7 @@ export const inputElement = (tag, text, placeText) => {
   });
 
   // Appending the elements:
-  article.appendChild(title);
-  article.appendChild(div);
-  div.appendChild(input);
-  div.appendChild(button);
+  appendToElement([title, div], article);
+  appendToElement([input, button], div);
   return article;
 };
