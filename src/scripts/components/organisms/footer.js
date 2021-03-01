@@ -6,7 +6,7 @@ import { appendToElement } from "../../modules/helpers/append";
 
 // Components
 import { createElement } from "../atoms/element";
-import { createClickableIMG } from "../molecules/img-link";
+import { createClickableIMG } from "../molecules/thumbnail";
 import { createLinkInText } from "../molecules/link-text";
 
 export const createFooter = () => {

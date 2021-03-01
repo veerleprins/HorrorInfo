@@ -1,6 +1,6 @@
 // Components
 import { createElement } from "../atoms/element";
-import { createClickableIMG } from "../molecules/img-link";
+import { createClickableIMG } from "./thumbnail";
 
 export const getInfoProvider = (providers) => {
   // Getting all the logo's:
