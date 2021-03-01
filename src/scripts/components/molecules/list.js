@@ -6,7 +6,7 @@ import { appendToElement } from "../../modules/helpers/append";
 
 // Components
 import { createElement } from "../atoms/element";
-import { createClickableIMG } from "./img-link";
+import { createClickableIMG } from "./thumbnail";
 
 export const createList = (dataArray) => {
   const ul = createElement("ul");
@@ -14,15 +14,15 @@ export const createList = (dataArray) => {
   dataArray.forEach((item) => {
     // Creating elements
     const li = createElement("li");
-    const title = createElement("h3", {}, item.title);
     const link = createClickableIMG(
       `/movie/${item.id}`,
       `${posterPath}${item.poster}`,
-      `Poster of the movie: ${item.title}`
+      `Poster of the movie: ${item.title}`,
+      item.title
     );
 
     // Appending elements
-    appendToElement([title, link], li);
+    appendToElement([link], li);
     appendToElement([li], ul);
   });
   return ul;
