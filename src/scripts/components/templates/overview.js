@@ -5,6 +5,7 @@ import { createFooter } from "../organisms/footer";
 import { createSection } from "../organisms/section";
 
 export const overviewTemplate = (parent, data) => {
+  // This function builds the template of the home page:
   const footer = createFooter();
   const header = createHeader();
   const main = createElement("main");

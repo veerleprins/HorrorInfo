@@ -5,10 +5,10 @@ import { appendToElement } from "../../modules/helpers/append";
 import { createElement } from "../atoms/element";
 
 export const createInput = (tag, text, placeText) => {
+  // This function builds an input field within an article:
   // Creating the elements
   const article = createElement("article");
-  const button = createElement("button");
-  const div = createElement("div");
+  const div = createElement("div", { class: "inputDiv" });
   const title = createElement(tag, {}, text);
   const input = createElement("input", {
     placeholder: placeText,
@@ -17,6 +17,6 @@ export const createInput = (tag, text, placeText) => {
 
   // Appending the elements:
   appendToElement([title, div], article);
-  appendToElement([input, button], div);
+  appendToElement([input], div);
   return article;
 };

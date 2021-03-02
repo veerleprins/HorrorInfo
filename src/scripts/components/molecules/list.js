@@ -6,15 +6,15 @@ import { appendToElement } from "../../modules/helpers/append";
 
 // Components
 import { createElement } from "../atoms/element";
-import { createClickableIMG } from "./thumbnail";
+import { createTumbnail } from "./thumbnail";
 
-export const createList = (dataArray) => {
-  const ul = createElement("ul");
-
+export const createList = (dataArray, ulObject, liObject) => {
+  // This function builds an unordered list based on
+  // received data:
+  const ul = createElement("ul", ulObject);
   dataArray.forEach((item) => {
-    // Creating elements
-    const li = createElement("li");
-    const link = createClickableIMG(
+    const li = createElement("li", liObject);
+    const link = createTumbnail(
       `/movie/${item.id}`,
       `${posterPath}${item.poster}`,
       `Poster of the movie: ${item.title}`,

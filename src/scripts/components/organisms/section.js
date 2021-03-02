@@ -6,7 +6,8 @@ import { createElement } from "../atoms/element";
 import { createList } from "../molecules/list";
 
 export const createSection = (data, sectionTitle) => {
-  // Create the elements:
+  // This function builds a section of the page and
+  // returns the section element:
   const section = createElement("section");
   const title = createElement("h2", {}, sectionTitle);
   const ul = createList(data);

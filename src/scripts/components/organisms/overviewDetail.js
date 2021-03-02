@@ -6,7 +6,7 @@ import { appendToElement } from "../../modules/helpers/append";
 
 // Components
 import { createElement } from "../atoms/element";
-import { createArticle } from "../molecules/article1";
+import { createArticle } from "../organisms/article1";
 import { createSecondArticle } from "../molecules/article2";
 
 export const createOverview = (data, providers) => {
@@ -23,6 +23,6 @@ export const createOverview = (data, providers) => {
   const article2 = createSecondArticle(data);
 
   // Adding to the element:
-  appendToElement([article, poster, article2], section);
+  appendToElement([poster, article, article2], section);
   return section;
 };

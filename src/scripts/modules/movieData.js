@@ -8,6 +8,8 @@ import {
 } from "./cleaning/clean";
 
 export const getData = async () => {
+  // This function fetches different endpoints, cleans
+  // this data and returns the cleaned data:
   try {
     // Internal
     const ID = window.location.pathname.replace(/\D/g, "");

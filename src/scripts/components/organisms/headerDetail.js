@@ -2,6 +2,7 @@
 import { createElement } from "../atoms/element";
 
 export const createHeader = (movieTitle) => {
+  // This function builds the header of the movie page:
   const header = createElement("header");
   const title = createElement("h1", {}, movieTitle);
   const backButton = createElement(
