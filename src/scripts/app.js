@@ -13,7 +13,7 @@ export const init = () => {
     const body = document.querySelector("body");
     router
       .on({
-        "/": homePage(body),
+        "/": homePage(body, router),
         "/movie/:id": moviePage(body),
         "/error": errorPage(body),
       })
