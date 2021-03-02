@@ -1,6 +1,7 @@
 ## HorrorInfo:
 
-<img width="1657" alt="Screenshot of the application." src="https://user-images.githubusercontent.com/35265583/109234284-ada0e000-77cb-11eb-8f73-b1f0b95c71b9.png">
+<img width="1657" alt="Mockup on Apple computer with screenshot of the application." src="https://user-images.githubusercontent.com/35265583/109638652-8db44800-7b4e-11eb-9b61-b6a4aa04974d.png">
+<!-- MockUp from Figma Plugin -->
 
 ## :black_nib: Short Description
 

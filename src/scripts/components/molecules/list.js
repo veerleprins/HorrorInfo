@@ -18,7 +18,8 @@ export const createList = (dataArray, ulObject, liObject) => {
       `/movie/${item.id}`,
       `${posterPath}${item.poster}`,
       `Poster of the movie: ${item.title}`,
-      item.title
+      item.title,
+      ""
     );
 
     // Appending elements

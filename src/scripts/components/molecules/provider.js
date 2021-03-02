@@ -23,8 +23,13 @@ export const getInfoProvider = (providers) => {
     [netflixURL, itunesURL, patheURL].forEach((logo, index) => {
       if (logo.includes(provider)) {
         let li = createElement("li");
-        let link = createTumbnail(hrefList[index], logo, `Logo of ${provider}`);
-        link.setAttribute("target", "_blank");
+        let link = createTumbnail(
+          hrefList[index],
+          logo,
+          `Logo of ${provider}`,
+          "",
+          "_blank"
+        );
         li.appendChild(link);
         ul.appendChild(li);
       }
