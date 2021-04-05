@@ -1,6 +1,7 @@
 ## HorrorInfo:
 
-<img width="1200" alt="Mockup on Apple computer with screenshot of the application." src="https://user-images.githubusercontent.com/35265583/109638652-8db44800-7b4e-11eb-9b61-b6a4aa04974d.png">
+![Mockup-AppleScreen](https://user-images.githubusercontent.com/35265583/113595935-f1440080-9639-11eb-9c90-0e0ce7a90484.png)
+
 <!-- MockUp from Figma Plugin -->
 
 ## :black_nib: Short Description
@@ -12,8 +13,8 @@ This repository shows a web application about movies with the API from [The Movi
 ## Table of contents:
 
 - [Feature](#small_orange_diamond-feature)
-- [Diagrams](#book-feature)
-- [Datasets](#link-datasets)
+- [Diagrams](#book-diagrams)
+- [Datasets](#link-api)
 - [Install](#arrow_down-install)
 - [Deploy](#globe_with_meridians-deploy)
 - [Future features](#small_blue_diamond-future-features)
@@ -69,7 +70,7 @@ Then you need to download this project and open it with your code editor. To do 
 
 Then type the following line of code into your terminal:
 
-`git clone https://github.com/veerleprins/web-app-from-scratch-2021.git`
+`git clone https://github.com/veerleprins/HorrorInfo.git`
 
 With this line of code, you've successfully downloaded the repository to your desired location.
 
@@ -120,6 +121,7 @@ The sources I've used to create this web application:
 - Dayıbaşı, O. (2020, 1 february). How to Hide Scrollbar and Visible Only Scrolling - Frontend Development With JS. Medium. https://medium.com/frontend-development-with-js/how-to-hide-scrollbar-and-visible-only-scrolling-79cc3472e503
 - Unknown, A. (2020, 16 december). How to get the keys of a JavaScript object. techtutorialsx. https://techtutorialsx.com/2020/05/23/javascript-getting-keys-of-object/
 - Pavlutin, D. (2020, 11 augustus). How to Access Object’s Keys, Values, and Entries in JavaScript. Dmitri Pavlutin Blog. https://dmitripavlutin.com/access-object-keys-values-entries/
+- Perłakowski, M. [michał-perłakowski]. (2016, 13 july). how to get the value from an event target in js [Stack Overflow Post]. Stack Overflow. https://stackoverflow.com/questions/38348258/how-to-get-the-value-from-an-event-target-in-js
 
 ## :lock: License
 

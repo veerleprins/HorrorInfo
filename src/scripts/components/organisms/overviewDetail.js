@@ -10,6 +10,7 @@ import { createArticle } from "../organisms/article1";
 import { createSecondArticle } from "../molecules/article2";
 
 export const createOverview = (data, providers) => {
+  // This function creates the overview of the movie page:
   // Create the total element:
   const section = createElement("section");
 

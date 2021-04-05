@@ -11,7 +11,7 @@ import {
 } from "./cleaning/clean";
 
 export const getDiscoveryMovies = async () => {
-  //This function fetches the same endpoint five times using
+  // This function fetches the same endpoint five times using
   // promise.all, cleans the data and returns it:
   try {
     // Fetch all data:

@@ -78,7 +78,7 @@ h2 {
 .home-page header {
   height: 45vh;
   background: var(--secondary);
-  background-image: url("../images/header-img.jpg");
+  background-image: linear-gradient(var(--gradient-2), black);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -614,4 +614,40 @@ footer .copy::before {
 footer .copy::after {
   content: ", 2021";
   display: inline-block;
+}
+
+/*******************************************************
+                        LOADING:
+********************************************************/
+
+.loading {
+  background-color: var(--posters);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+}
+
+.loading p {
+  font-size: 2em;
+}
+
+/*******************************************************
+                        ERROR:
+********************************************************/
+
+.error {
+  background-color: var(--posters);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+}
+
+.error h3 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
 }

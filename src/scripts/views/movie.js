@@ -1,27 +1,37 @@
 // Modules
 import { getData } from "../modules/movieData";
+import { loadingState } from "../modules/states/loadingState";
 
 // Components
 import { createOverview } from "../components/organisms/overviewDetail";
 import { createSection } from "../components/organisms/section";
-import { detailTemplate } from "../components/templates/detail";
+import { detail } from "../components/templates/detail";
 
 export const moviePage = (body) => {
   return async () => {
     // Adds class:
     body.classList.add("movie-page");
+    detail(body, "Loading...");
+    loadingState(true);
 
-    // Get data:
-    const [movie, recommendations, providers] = await getData();
+    try {
+      // Get data:
+      const [movie, recommendations, providers] = await getData();
+      loadingState(false);
 
-    // Creating the main:
-    const main = document.createElement("main");
-    const section1 = createOverview(movie, providers);
-    const section2 = createSection(recommendations, "Recommendations:");
+      // Creating the page:
+      const main = document.querySelector("main");
+      const h1 = document.querySelector("h1");
+      h1.innerHTML = movie.original_title;
 
-    // Appending the elements to the page:
-    main.appendChild(section1);
-    main.appendChild(section2);
-    detailTemplate(body, main, movie);
+      const section1 = createOverview(movie, providers);
+      const section2 = createSection(recommendations, "Recommendations:");
+
+      // Appending the elements to the page:
+      main.appendChild(section1);
+      main.appendChild(section2);
+    } catch (err) {
+      errorState();
+    }
   };
 };
