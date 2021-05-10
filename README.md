@@ -122,6 +122,8 @@ The sources I've used to create this web application:
 - Unknown, A. (2020, 16 december). How to get the keys of a JavaScript object. techtutorialsx. https://techtutorialsx.com/2020/05/23/javascript-getting-keys-of-object/
 - Pavlutin, D. (2020, 11 augustus). How to Access Object’s Keys, Values, and Entries in JavaScript. Dmitri Pavlutin Blog. https://dmitripavlutin.com/access-object-keys-values-entries/
 - Perłakowski, M. [michał-perłakowski]. (2016, 13 july). how to get the value from an event target in js [Stack Overflow Post]. Stack Overflow. https://stackoverflow.com/questions/38348258/how-to-get-the-value-from-an-event-target-in-js
+- w3schools. (z.d.). Tryit Editor v3.6. https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_loader
+- Singh, H. [harsimrat-singh]. (2010, 13 juni). Checking for multiple images loaded [StackOverflow Post]. Stack Overflow. https://stackoverflow.com/questions/3032299/checking-for-multiple-images-loaded
 
 ## :lock: License
 
