@@ -1,6 +1,6 @@
 // Modules
 import { getData } from "../modules/movieData";
-import { loadingState } from "../modules/states/loadingState";
+import { loadingState, checkLoaded } from "../modules/states/loadingState";
 
 // Components
 import { createOverview } from "../components/organisms/overviewDetail";
@@ -17,7 +17,6 @@ export const moviePage = (body) => {
     try {
       // Get data:
       const [movie, recommendations, providers] = await getData();
-      loadingState(false);
 
       // Creating the page:
       const main = document.querySelector("main");
@@ -30,7 +29,12 @@ export const moviePage = (body) => {
       // Appending the elements to the page:
       main.appendChild(section1);
       main.appendChild(section2);
+
+      // Change loading state:
+      let images = document.getElementsByTagName("img");
+      checkLoaded(images);
     } catch (err) {
+      loadingState(false);
       errorState();
     }
   };

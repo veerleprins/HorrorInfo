@@ -32,6 +32,59 @@ h2 {
 }
 
 /*******************************************************
+                        LOADING:
+********************************************************/
+
+.loading {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* height: 200px; */
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.582);
+}
+
+.loading p {
+  font-size: 2em;
+  text-align: center;
+}
+
+.loading .loader {
+  margin-top: 2em;
+  border: 1em solid white;
+  border-radius: 100%;
+  border-top: 1em solid #7b0000;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2.5s linear infinite;
+  animation: spin 2.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*******************************************************
                   OVERVIEW HEADER:
 ********************************************************/
 
@@ -131,15 +184,17 @@ h2 {
 }
 
 .home-page header article .inputDiv::after {
-  content: "\f002";
-  font-family: FontAwesome;
+  content: "";
+  background-image: url("../images/searchIcon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
   position: absolute;
-  color: var(--primary);
   display: block;
-  font-size: 1.5em;
-  top: 50%;
-  right: 0%;
-  transform: translateX(-50%) translateY(-50%);
+  width: 25px;
+  height: 25px;
+  top: 25%;
+  right: 10px;
+  cursor: pointer;
 }
 
 .home-page header article div input:focus {
@@ -149,6 +204,12 @@ h2 {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .home-page header article .inputDiv {
+    width: 90%;
+  }
 }
 
 /*******************************************************
@@ -174,11 +235,12 @@ h2 {
 .home-page main section ul {
   display: flex;
   flex-direction: row;
+  align-items: start;
   overflow-x: scroll;
   overflow-y: hidden;
   scrollbar-width: none;
-  align-items: start;
   padding-top: 1.5em;
+  height: 550px;
 }
 
 .home-page main section ul::-webkit-scrollbar {
@@ -192,8 +254,11 @@ h2 {
   flex-direction: column;
   padding: 1em;
   margin-left: 1em;
+  margin-right: 1em;
   transition: 0.5s;
   height: 500px;
+  min-width: 344px;
+  /* width: 344px; */
 }
 
 .home-page main section ul li a {
@@ -245,8 +310,16 @@ h2 {
 }
 
 @media (max-width: 768px) {
+  .home-page main section h2 {
+    font-size: 1.5em;
+  }
+
+  .home-page main section ul {
+    height: 400px;
+  }
   .home-page main section ul li {
     height: 350px;
+    min-width: 244px;
   }
 }
 
@@ -255,7 +328,27 @@ h2 {
 ********************************************************/
 
 .error-page {
-  height: 100vh;
+  height: 100%;
+}
+
+.error-page h1 {
+  font-size: 3em;
+  text-align: center;
+  margin: 2em 0em;
+}
+
+.error-page section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-page footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*******************************************************
@@ -270,28 +363,32 @@ h2 {
 }
 
 .movie-page header a {
-  position: relative;
-  top: 40px;
-  left: 0;
   background-color: var(--posters);
   font-family: "Girassol", cursive;
   text-decoration: none;
   color: var(--primary);
+  position: relative;
+  top: 40px;
+  left: 0;
   font-size: 1.5em;
-  padding-left: 30px;
-  padding: 10px 35px 10px 25px;
+  padding: 10px 35px 10px 55px;
   border-radius: 2px;
   transition: 0.3s;
 }
 
 .movie-page header a::before {
-  --width: 25px;
-  content: "\f053";
-  font-family: FontAwesome;
-  display: inline-block;
-  left: 10px;
-  width: var(--width);
-  height: var(--width);
+  content: "";
+  background-image: url("../images/backArrow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  z-index: 3;
+  width: 31px;
+  height: 15px;
+  top: 18px;
+  margin-left: 10px;
 }
 
 .movie-page header a:hover {
@@ -356,7 +453,7 @@ h2 {
 .movie-page main section:first-child {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 4em;
+  grid-gap: 2em;
   margin-bottom: 4em;
   height: 600px;
 }
@@ -421,7 +518,7 @@ h2 {
 }
 
 .movie-page main section:first-child article:nth-of-type(2) h3:nth-of-type(1) {
-  margin-top: 0em;
+  margin-top: 1em;
 }
 
 /* Second section: */
@@ -510,6 +607,11 @@ h2 {
 }
 
 @media (max-width: 1080px) {
+  .movie-page main section:first-child {
+    grid-gap: 4em;
+  }
+}
+@media (max-width: 890px) {
   .movie-page main section:first-child {
     grid-template-columns: 1fr 1fr;
   }
@@ -602,35 +704,16 @@ footer .copy {
 
 footer .copy::before {
   --width: 15px;
-  content: "\f1f9";
+  content: "\00A9";
   position: absolute;
-  font-family: FontAwesome;
   width: 15px;
   height: 15px;
-  top: calc(50% - var(--width) / 2);
   left: -20px;
 }
 
 footer .copy::after {
   content: ", 2021";
   display: inline-block;
-}
-
-/*******************************************************
-                        LOADING:
-********************************************************/
-
-.loading {
-  background-color: var(--posters);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 200px;
-}
-
-.loading p {
-  font-size: 2em;
 }
 
 /*******************************************************

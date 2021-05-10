@@ -3,7 +3,7 @@ import { liveInput } from "../events/search";
 
 // Modules
 import { getDiscoveryMovies } from "../modules/discoveryData";
-import { loadingState } from "../modules/states/loadingState";
+import { loadingState, checkLoaded } from "../modules/states/loadingState";
 import { errorState } from "../modules/states/errorState";
 
 // Components
@@ -21,20 +21,22 @@ export const homePage = (body) => {
     while (body.firstChild) {
       body.removeChild(body.firstChild);
     }
+    // Add layout & state:
+    layout(body);
+    loadingState(true);
 
     try {
-      // Add layout & state:
-      layout(body);
-      loadingState(true);
-
       // Getting the cleaned data:
       const data = await getDiscoveryMovies();
-      loadingState(false);
 
       // Adding the data:
       const main = document.querySelector("main");
-      const section = createSection(data, "Discover horrors: ");
+      const section = await createSection(data, "Discover horrors: ");
       main.appendChild(section);
+
+      // Change loading state:
+      let images = document.getElementsByTagName("img");
+      checkLoaded(images);
 
       // Event listener:
       const inputField = document.querySelector("input");
@@ -48,6 +50,7 @@ export const homePage = (body) => {
         false
       );
     } catch (err) {
+      loadingState(false);
       errorState();
     }
   };

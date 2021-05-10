@@ -10,7 +10,7 @@ export const createSection = (data, sectionTitle) => {
   // returns the section element:
   const section = createElement("section");
   const title = createElement("h2", {}, sectionTitle);
-  const ul = createList(data);
+  const ul = createList(data, { class: "movies" });
 
   // Appending the elements:
   appendToElement([title, ul], section);
